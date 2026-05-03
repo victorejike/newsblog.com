@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post - Modern Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">ModernBlog</h1>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/popular">Popular</a></li>
+                <li><a href="/categories">Categories</a></li>
+                <li><a href="/bookmarks" id="bookmarks-link" style="display: none;">Bookmarks</a></li>
+                <li><a href="/profile" id="profile-link" style="display: none;">Profile</a></li>
+                <li><a href="/login" id="login-link">Login</a></li>
+                <li><a href="/register" id="register-link">Register</a></li>
+                <li><a href="/admin" id="admin-link" style="display: none;">Admin</a></li>
+                <li><a href="#" id="logout-link" style="display: none;">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="post-full fade-in" id="post-container">
+            <!-- Post content will be loaded here -->
+        </article>
+
+        <!-- Engagement Bar -->
+        <div class="engagement-bar fade-in" id="engagement-bar" style="display: none;">
+            <button class="engagement-btn" id="like-btn">
+                <span>❤️</span>
+                <span id="like-count">0</span>
+            </button>
+            <button class="engagement-btn" id="bookmark-btn">
+                <span>🔖</span>
+                <span>Bookmark</span>
+            </button>
+            <button class="engagement-btn" id="share-btn">
+                <span>📤</span>
+                <span>Share</span>
+            </button>
+        </div>
+
+        <!-- Comments Section -->
+        <section class="comments-section fade-in" id="comments-section" style="display: none;">
+            <h3 class="comments-header">Comments (<span id="comment-count">0</span>)</h3>
+
+            <!-- Comment Form -->
+            <div class="comment-form" id="comment-form-container" style="display: none;">
+                <textarea class="comment-input" id="comment-input" placeholder="Share your thoughts..."></textarea>
+                <button class="btn mt-1" id="submit-comment">Post Comment</button>
+            </div>
+
+            <div id="comments-list">
+                <!-- Comments will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Related Posts -->
+        <section class="related-posts mt-3">
+            <h3 class="mb-2">You Might Also Like</h3>
+            <div class="posts-grid" id="related-posts">
+                <!-- Related posts will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        🌙
+    </button>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ModernBlog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
